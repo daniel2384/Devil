@@ -3,10 +3,24 @@
 # github : https://github.com/evildevill
 # Note : we are not responsible for any misuse
 try:
-    import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, getpass, mechanize, requests
+    import datetime
+    import getpass
+    import hashlib
+    import json
+    import os
+    import random
+    import re
+    import sys
+    import threading
+    import time
+    import urllib
     from multiprocessing.pool import ThreadPool
-    from requests.exceptions import ConnectionError
+
+    import cookielib
+    import mechanize
+    import requests
     from mechanize import Browser
+    from requests.exceptions import ConnectionError
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
@@ -20,7 +34,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 br.addheaders = [('user-agent', 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]')]
 
 def exit():
-    print '[!] Exit'
+    print [] Exit
     os.sys.exit()
 
 
@@ -56,7 +70,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r[\xe2\x9c\x94] Logging In ' + o,
+        print "\r[\xe2\x9c\x94] Logging In " + o,
         sys.stdout.flush()
         time.sleep(1)
 
